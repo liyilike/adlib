@@ -20,8 +20,12 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.banner.integrationsdk.R;
+import com.banner.integrationsdk.Interface.JavaScriptinterface;
 import com.banner.integrationsdk.util.AndroidUtil;
+import com.liyi.R;
+import com.liyi.fragmet.IndexOne;
+
+import java.lang.ref.WeakReference;
 
 
 public class MyAdBanner extends AppCompatActivity {
@@ -30,27 +34,42 @@ public class MyAdBanner extends AppCompatActivity {
     TextView url, title;
     ImageView close, close2;
     ProgressBar progressBar = null;
-    static  Context mContext;
+    static Context mContext;
     SwipeRefreshLayout swipeRefreshLayout;
     public static String downUrl = null;
-    public static LinearLayout downLin= null;
-    public static TextView mun= null;
+    public static LinearLayout downLin = null;
+    public static TextView mun = null;
+    String webURL;
+    private Handler mHandler = new MyHandler(this);
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myad);
         mContext = this;
+        getBundle();
         initview();
     }
+
+    public void getBundle() {
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null && bundle.containsKey("url")) {
+            webURL = bundle.getString("url");//读出数据
+        } else {
+            webURL = getString(R.string.apk_more_down);
+        }
+
+    }
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        downProgress =null;
+        downProgress = null;
     }
 
     public void initview() {
-        downLin= (LinearLayout) findViewById(R.id.downLin);
-        mun= (TextView) findViewById(R.id.mun);
+        downLin = (LinearLayout) findViewById(R.id.downLin);
+        mun = (TextView) findViewById(R.id.mun);
         downProgress = (ProgressBar) findViewById(R.id.downProgress);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.id_swipe_ly);
         //设置刷新时动画的颜色，可以设置4个
@@ -67,7 +86,10 @@ public class MyAdBanner extends AppCompatActivity {
         close2 = (ImageView) findViewById(R.id.close2);
         myweb = (WebView) findViewById(R.id.myweb);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        myweb.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);  //设置 缓存模式
+        myweb.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);  //设置 缓存模式
+        myweb.clearCache(true);
+        //js和网页交互让网页跳转android原生浏览器
+        myweb.addJavascriptInterface(new JavaScriptinterface(this),"android");
         // 设置setWebChromeClient对象
         myweb.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -100,7 +122,7 @@ public class MyAdBanner extends AppCompatActivity {
 
         myweb.getSettings().setJavaScriptEnabled(true);
         myweb.requestFocus();
-        myweb.loadUrl(getString(R.string.apk_more_down));
+        myweb.loadUrl(webURL);
         // 设置web视图客户端
         myweb.setWebViewClient(new MyWebViewClient());
         myweb.setDownloadListener(new MyWebViewDownLoadListener());
@@ -115,7 +137,7 @@ public class MyAdBanner extends AppCompatActivity {
             Message msg = new Message();
             msg.obj = title2;
             msg.what = 0;
-            handler.sendMessage(msg);
+            mHandler.sendMessage(msg);
         }
 
         public void onProgressChanged(WebView view, int newProgress) {
@@ -140,7 +162,7 @@ public class MyAdBanner extends AppCompatActivity {
         @Override
         public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype,
                                     long contentLength) {
-            if(MyAdService.runFlag==true){
+            if (MyAdService.runFlag == true) {
                 AndroidUtil.setToast(mContext, getString(R.string.ad_ban_loading));
                 return;
             }
@@ -177,21 +199,38 @@ public class MyAdBanner extends AppCompatActivity {
     }
 
 
+    static class MyHandler extends Handler {
+        WeakReference<MyAdBanner> mActivity;
 
+        public MyHandler(MyAdBanner activity) {
+            mActivity = new WeakReference<MyAdBanner>(activity);
+        }
 
-    Handler handler = new Handler() {
+        @Override
         public void handleMessage(Message msg) {
+            MyAdBanner Activity = mActivity.get();
             switch (msg.what) {
                 case 0:
-                    title.setText((String) msg.obj);
-                    break;
-                case 1:
-                    break;
-                default:
+                    Activity.title.setText((String) msg.obj);
                     break;
             }
-
         }
-    };
+
+    }
+
+//    Handler handler = new Handler() {
+//        public void handleMessage(Message msg) {
+//            switch (msg.what) {
+//                case 0:
+//                    title.setText((String) msg.obj);
+//                    break;
+//                case 1:
+//                    break;
+//                default:
+//                    break;
+//            }
+//
+//        }
+//    };
 
 }

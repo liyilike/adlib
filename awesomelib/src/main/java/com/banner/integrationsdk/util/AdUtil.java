@@ -7,12 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.banner.integrationsdk.Interface.ADCallBackInterface;
-import com.banner.integrationsdk.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.liyi.R;
 import com.qq.e.ads.banner.ADSize;
 import com.qq.e.ads.banner.AbstractBannerADListener;
 import com.qq.e.ads.banner.BannerView;
@@ -37,6 +37,7 @@ public class AdUtil {
         if (Instance == null) {
             Instance = new AdUtil();
             init();
+
             return Instance;
         }
         return Instance;
@@ -46,27 +47,13 @@ public class AdUtil {
         qqID = mContext.getString(R.string.qq_ad_id);
         qq_IAD_KEY = mContext.getString(R.string.qq_iad_key);
         qq_BAN_KEY = mContext.getString(R.string.qq_ban_key);
-//        qq_SP_KEY = mContext.getString(R.string.qq_sp_key);
+        qq_SP_KEY = mContext.getString(R.string.qq_sp_key);
         admob_IAD = mContext.getString(R.string.admob_iad);
         admob_BAN = mContext.getString(R.string.admob_ban);
-//        if (TextUtils.isEmpty(qqID)) {
-//            qqID = mContext.getString(R.string.qq_ad_id);
-//        }
-//        if(TextUtils.isEmpty(qq_IAD_KEY)){
-//            qq_IAD_KEY = mContext.getString(R.string.qq_iad_key);
-//        }
-//        if(TextUtils.isEmpty(qq_BAN_KEY)){
-//            qq_BAN_KEY = mContext.getString(R.string.qq_ban_key);
-//        }
-//        if(TextUtils.isEmpty(qq_SP_KEY)){
-//            qq_SP_KEY = mContext.getString(R.string.qq_sp_key);
-//        }
-//        if(TextUtils.isEmpty(admob_IAD)){
-//            admob_IAD = mContext.getString(R.string.admob_iad);
-//        }
-//        if(TextUtils.isEmpty(admob_BAN)){
-//            admob_BAN = mContext.getString(R.string.admob_ban);
-//        }
+        //初始化谷歌广告的id
+        MobileAds.initialize(mContext, mContext.getString(R.string.admob_id));
+
+
     }
 
 
@@ -98,6 +85,9 @@ public class AdUtil {
             });
             return;
         }
+
+
+
         InterstitialAD(new ADCallBackInterface() {
             @Override
             public void onADReceive() {
@@ -121,11 +111,6 @@ public class AdUtil {
         });
 
     }
-
-
-
-
-
 
 
 
@@ -159,7 +144,7 @@ public class AdUtil {
     public void InterstitialAD(final ADCallBackInterface adCallBackInterface) {
 
         if (ContextCompat.checkSelfPermission(mContext, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                |ContextCompat.checkSelfPermission(mContext, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+                | ContextCompat.checkSelfPermission(mContext, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             AdUtil.getInstance(mContext).InterstitialGoogleAD(null);
             return;
         }
@@ -200,6 +185,7 @@ public class AdUtil {
             }
         });
         iad.loadAD();
+
     }
 
 
@@ -243,6 +229,8 @@ public class AdUtil {
     }
 
     public static void SplashAD(ViewGroup adContainer, View skipContainer, int fetchDelay, final ADCallBackInterface adCallBackInterface) {
+
+//      splashAD = new SplashAD(mContext, adContainer, skipContainer, mContext.getString(R.string.gdt_ID),mContext.getString(R.string.gdt_Splash), new SplashADListener() {
         splashAD = new SplashAD(mContext, adContainer, skipContainer,qqID, qq_SP_KEY, new SplashADListener() {
             @Override
             public void onADDismissed() {
@@ -250,7 +238,6 @@ public class AdUtil {
                     adCallBackInterface.onADClosed();
                 }
             }
-
             @Override
             public void onNoAD(AdError adError) {
                 if (adCallBackInterface != null) {
@@ -275,8 +262,14 @@ public class AdUtil {
             @Override
             public void onADTick(long l) {
             }
+
+            @Override
+            public void onADExposure() {
+
+            }
         }, fetchDelay);
     }
+
 
 
 }

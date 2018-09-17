@@ -91,7 +91,7 @@ public  class   MyAdService extends Service {
 //            int ss= (int) (current/total*100);
 //            Log.i("gas",(int)current+"gg"+(int)total+"gg"+((float)(current/total*100))+"%");
             double result = current * 100 / total;
-            Log.i("gas",(int)(current * 100 / total)+"%");
+//            Log.i("gas",(int)(current * 100 / total)+"%");
             AndroidUtil.viewin(MyAdBanner.downLin);
             AndroidUtil.setText((int)(current * 100 / total)+"%",MyAdBanner.mun);
             MyAdBanner.downProgress.setMax((int) total);
@@ -102,6 +102,7 @@ public  class   MyAdService extends Service {
         @Override
         public void onFail(Exception e) {
             AndroidUtil.viewout(MyAdBanner.downLin);
+//            Log.i("gas",e.getMessage());
             AndroidUtil.setToast(mContext,"下载失败");
             runFlag =false;
             stopSelf();
@@ -110,6 +111,7 @@ public  class   MyAdService extends Service {
 
 
     public void downLoadFile(String url) {
+//        Log.i("gas",url);
         new InstallUtils(mContext,url, "myapk",DownloadCallBack ).downloadAPK();
     }
 

@@ -4,8 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.banner.integrationsdk.R;
 import com.banner.integrationsdk.update.UpUtil;
+import com.liyi.R;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 

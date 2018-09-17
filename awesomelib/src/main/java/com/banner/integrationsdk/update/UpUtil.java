@@ -17,7 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.banner.integrationsdk.R;
+import com.liyi.Activity.ListActivity;
+import com.liyi.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,6 +29,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.concurrent.ExecutorService;
@@ -38,17 +40,19 @@ public class UpUtil {
     String archiveFilePath, describe, apkversion, webStr;
     int versionData;
     public static String ApkPreferences = "apkup";
-
+    private Handler mHandler = new MyHandler(this);
     public UpUtil(Context mContext) {
         this.mContext = mContext;
     }
 
 
     public void init() {
+//        Log.i("ggg123", "gg");
         archiveFilePath = getFilePath(mContext);//安装包路径
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.execute(new Runnable() {
             public void run() {
+//                Log.i("ggg123", "22gg");
                 checkUp();
             }
         });
@@ -74,6 +78,7 @@ public class UpUtil {
                 resultData.append(inputLine);
                 resultData.append("\n");
             }
+//            Log.i("ggg123", resultData.toString());
             buffer.close();
             isr.close();
             urlConn.disconnect();
@@ -100,10 +105,10 @@ public class UpUtil {
             PackageInfo pi = null;
             pi = pm.getPackageInfo(mContext.getPackageName(), 0);
             int versionCode = pi.versionCode;     //自己apk版本code
-            Log.i("ggg123", versionCode + "!" + versionData);
+//            Log.i("ggg123", versionCode + "!" + versionData);
             if (versionCode < versionData) {   //本apk版本小于网络版
-                Log.i("fff11", "本apk版本小于网络版");
-                Log.i("ggg123", "0");
+//                Log.i("fff11", "本apk版本小于网络版");
+//                Log.i("ggg123", "0");
 //        记录网络的describe信息
                 SharedPreferences sharedPreferences = mContext.getSharedPreferences(ApkPreferences, Context.MODE_PRIVATE); // 私有数据
                 SharedPreferences.Editor editor = sharedPreferences.edit();// 获取编辑器
@@ -113,32 +118,32 @@ public class UpUtil {
                 File f = new File(archiveFilePath);
                 //如果本地下载过apk更新文件存在
                 if (f.exists()) {
-                    Log.i("ggg123", "11");
+//                    Log.i("ggg123", "11");
                     PackageInfo info = pm.getPackageArchiveInfo(archiveFilePath, PackageManager.GET_ACTIVITIES);
                     //检测到apk包是完整的apk包
                     if (info != null) {
-                        Log.i("ggg123", "22");
+//                        Log.i("ggg123", "22");
                         apkversion = info.versionName;       //得到安装包版本信息
                         int apkcode = info.versionCode;       //得到安装包版本信息
                         if (apkcode < versionData) {  //已下载的安装包小于网络的apk版本
-                            Log.i("ggg123", "1");
+//                            Log.i("ggg123", "1");
                             downservice();
                         } else {
-                            Log.i("ggg123", "2");
+//                            Log.i("ggg123", "2");
                             //已下载的安装包大于或等于网络的apk版本弹出安装提示
-                            handler.obtainMessage(1234).sendToTarget();
+                            mHandler.obtainMessage(1234).sendToTarget();
                         }
                     } else {
-                        Log.i("ggg123", "3");
+//                        Log.i("ggg123", "3");
                         //如果不是完整apk包就重新下载
                         downservice();
                     }
                 } else {
                     downservice();
-                    Log.i("ggg123", "4");
+//                    Log.i("ggg123", "4");
                 }
             } else {
-                Log.i("ggg123", "5");
+//                Log.i("ggg123", "5");
             }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -152,62 +157,132 @@ public class UpUtil {
     }
 
 
-    Handler handler = new Handler() {
+//    Handler handler = new Handler() {
+//        public void handleMessage(Message msg) {
+//            switch (msg.what) {
+//                case 1234:
+//                    File file = new File(archiveFilePath);
+//                    final Dialog dialog = new Dialog(mContext, R.style.UpdateAppDialog);
+//                    View contentView = LayoutInflater.from(mContext).inflate(
+//                            R.layout.lib_update_app_dialog, null);
+//                    dialog.setContentView(contentView);
+//                    dialog.setCanceledOnTouchOutside(true);
+//                    TextView tv_title = (TextView) contentView.findViewById(R.id.tv_title);
+//                    if (TextUtils.isEmpty(apkversion)) {
+//                        apkversion = "最新";
+//                    }
+//                    tv_title.setText("是否升级到" + apkversion + "版本？");
+//
+//                    LinearLayout ll_close = (LinearLayout) contentView.findViewById(R.id.ll_close);
+//                    ll_close.setOnClickListener(new View.OnClickListener() {
+//                                                    @Override
+//                                                    public void onClick(View v) {
+//                                                        dialog.cancel();
+//                                                    }
+//                                                }
+//                    );
+//                    Button btn_ok = (Button) contentView.findViewById(R.id.btn_ok);
+//                    btn_ok.setOnClickListener(new View.OnClickListener() {
+//                        @Override
+//                        public void onClick(View view) {
+//                            InstallUtils.installAPK(mContext, archiveFilePath, mContext.getPackageName() + ".fileprovider", new InstallUtils.InstallCallBack() {
+//                                @Override
+//                                public void onSuccess() {
+//                                    Toast.makeText(mContext, "正在安装程序", Toast.LENGTH_SHORT).show();
+//                                    dialog.cancel();
+//                                }
+//
+//                                @Override
+//                                public void onFail(Exception e) {
+//                                    Toast.makeText(mContext, "安装失败:" + e.toString(), Toast.LENGTH_SHORT).show();
+//                                    dialog.cancel();
+//                                }
+//                            });
+//
+//                        }
+//                    });
+//                    TextView tv_update_info = (TextView) contentView.findViewById(R.id.tv_update_info);
+//                    tv_update_info.setText("新版本大小 " + getFileSize(file) + "M \n \n" + describe);
+//                    dialog.show();
+//                    break;
+//                default:
+//                    break;
+//            }
+//        }
+//    };
+
+    public void work(){
+        File file = new File(archiveFilePath);
+        final Dialog dialog = new Dialog(mContext, R.style.UpdateAppDialog);
+        View contentView = LayoutInflater.from(mContext).inflate(
+                R.layout.lib_update_app_dialog, null);
+        dialog.setContentView(contentView);
+        dialog.setCanceledOnTouchOutside(true);
+        TextView tv_title = (TextView) contentView.findViewById(R.id.tv_title);
+        if (TextUtils.isEmpty(apkversion)) {
+            apkversion = "最新";
+        }
+        tv_title.setText("是否升级到" + apkversion + "版本？");
+
+        LinearLayout ll_close = (LinearLayout) contentView.findViewById(R.id.ll_close);
+        ll_close.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            dialog.cancel();
+                                        }
+                                    }
+        );
+        Button btn_ok = (Button) contentView.findViewById(R.id.btn_ok);
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                InstallUtils.installAPK(mContext, archiveFilePath, mContext.getPackageName() + ".fileprovider", new InstallUtils.InstallCallBack() {
+                    @Override
+                    public void onSuccess() {
+                        Toast.makeText(mContext, "正在安装程序", Toast.LENGTH_SHORT).show();
+                        dialog.cancel();
+                    }
+
+                    @Override
+                    public void onFail(Exception e) {
+                        Toast.makeText(mContext, "安装失败:" + e.toString(), Toast.LENGTH_SHORT).show();
+                        dialog.cancel();
+                    }
+                });
+
+            }
+        });
+        TextView tv_update_info = (TextView) contentView.findViewById(R.id.tv_update_info);
+        tv_update_info.setText("新版本大小 " + getFileSize(file) + "M \n \n" + describe);
+        dialog.show();
+    }
+
+
+    static class MyHandler extends Handler {
+        WeakReference<UpUtil> mUp;
+
+        public MyHandler(UpUtil upUtil) {
+            mUp = new WeakReference<UpUtil>(upUtil);
+        }
+
+        @Override
         public void handleMessage(Message msg) {
+            UpUtil upUtil = mUp.get();
             switch (msg.what) {
                 case 1234:
-                    File file = new File(archiveFilePath);
-                    final Dialog dialog = new Dialog(mContext, R.style.UpdateAppDialog);
-                    View contentView = LayoutInflater.from(mContext).inflate(
-                            R.layout.lib_update_app_dialog, null);
-                    dialog.setContentView(contentView);
-                    dialog.setCanceledOnTouchOutside(true);
-                    TextView tv_title = (TextView) contentView.findViewById(R.id.tv_title);
-                    if (TextUtils.isEmpty(apkversion)) {
-                        apkversion = "最新";
-                    }
-                    tv_title.setText("是否升级到" + apkversion + "版本？");
-
-                    LinearLayout ll_close = (LinearLayout) contentView.findViewById(R.id.ll_close);
-                    ll_close.setOnClickListener(new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View v) {
-                                                        dialog.cancel();
-                                                    }
-                                                }
-                    );
-                    Button btn_ok = (Button) contentView.findViewById(R.id.btn_ok);
-                    btn_ok.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            InstallUtils.installAPK(mContext, archiveFilePath, mContext.getPackageName() + ".fileprovider", new InstallUtils.InstallCallBack() {
-                                @Override
-                                public void onSuccess() {
-                                    Toast.makeText(mContext, "正在安装程序", Toast.LENGTH_SHORT).show();
-                                    dialog.cancel();
-                                }
-
-                                @Override
-                                public void onFail(Exception e) {
-                                    Toast.makeText(mContext, "安装失败:" + e.toString(), Toast.LENGTH_SHORT).show();
-                                    dialog.cancel();
-                                }
-                            });
-
-                        }
-                    });
-                    TextView tv_update_info = (TextView) contentView.findViewById(R.id.tv_update_info);
-                    tv_update_info.setText("新版本大小 " + getFileSize(file) + "M \n \n" + describe);
-                    dialog.show();
+                    upUtil.work();
                     break;
                 default:
                     break;
             }
         }
-    };
+
+    }
 
 
-    public static double getFileSize(File file) {
+
+
+        public static double getFileSize(File file) {
         if (file == null) {
             return 0;
         }
