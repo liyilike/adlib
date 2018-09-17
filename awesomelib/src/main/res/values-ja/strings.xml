@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">Android最新バージョン</string>
+    <string name="ad_ban_exit">4秒後に終了</string>
+    <string name="ad_ban_check">私を信じてください時広告人超かっこいい、24K純帥</string>
+    <string name="ad_ban_exit_activity"> 秒後に終了する</string>
+    <string name="ad_ban_exittv">名目</string>
+    <string name="ad_ban_tip">ヒント：ウィンドウをクリックしてウィンドウを閉じます！</string>
+    <string name="ad_ban_more">より多くの作者ソフトウェア</string>
+    <string name="ad_ban_loading">前のダウンロードはまだ実行されていますので、ダウンロード完了を待ってください</string>
+    <string name="ad_ban_start_down">ダウンロード開始</string>
+</resources>

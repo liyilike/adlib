@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">androidin uusin versio</string>
+    <string name="ad_ban_exit">4 sekuntia sen jälkeen, kun lopettaa</string>
+    <string name="ad_ban_check">uskon, että olen vähän mainoksia super komea mies, 24 karaatin.</string>
+    <string name="ad_ban_exit_activity"> sekuntia myöhemmin ulos</string>
+    <string name="ad_ban_exittv">opt - out -</string>
+    <string name="ad_ban_tip">vihje: klikkaa ikkunan ulkopuolella, sulje ikkuna!</string>
+    <string name="ad_ban_more">ohjelmistojen enemmän laatija</string>
+    <string name="ad_ban_loading">sitten vielä yksi ladata suorittaa loppuun, odota.</string>
+    <string name="ad_ban_start_down">alkoi ladata</string>
+</resources>

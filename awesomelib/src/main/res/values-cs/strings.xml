@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">android nejnovější verze</string>
+    <string name="ad_ban_exit">4 sekund po stažení</string>
+    <string name="ad_ban_check">prosím, věř mi trochu reklamy jsou super pohledný, 24 karátů čistý.</string>
+    <string name="ad_ban_exit_activity"> sekund po stažení</string>
+    <string name="ad_ban_exittv">stažení</string>
+    <string name="ad_ban_tip">tip: klikněte na okně externí a zavři to okno!</string>
+    <string name="ad_ban_more">další autoři softwaru</string>
+    <string name="ad_ban_loading">ještě pořád si stahování dokončeno plnění, počkejte prosím.</string>
+    <string name="ad_ban_start_down">začněte stahovat</string>
+</resources>

@@ -1,0 +1,30 @@
+<paths>
+    <!-- 这个下载路径也不可以修改，必须为GDTDOWNLOAD -->
+    <external-path name="gdt_sdk_download_path" path="GDTDOWNLOAD" />
+<!--    &lt;!&ndash; 这个下载路径不可以修改，百度更新的 &ndash;&gt;
+    <external-files-path name="extfiles" path="autoupdatecache/" />
+    <external-cache-path name="extcachs" path="autoupdatecache/" />
+    <cache-path name="intcachs" path="autoupdatecache/" />-->
+    <!-- 自己自动更新的临时权限 -->
+    <external-path
+        name="mn_update_external"
+        path="" />
+    <!--升级-->
+    <external-cache-path
+        name="mn_update_external_cache"
+        path="" />
+
+    <cache-path
+        name="mn_update_cache"
+        path="" />
+
+
+<!--    &lt;!&ndash; 这个下载路径不可以修改，相机保存路径的 &ndash;&gt;
+    <files-path
+        name="colors"
+        path="colors/" />
+
+    <files-path
+        name="palettes"
+        path="palettes/" />-->
+</paths>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">La versión más reciente de Android</string>
+    <string name="ad_ban_exit">4 segundos después de salir de</string>
+    <string name="ad_ban_check">Por favor, creo que el punto de que en la publicidad de puro guapo, guapo, 24K</string>
+    <string name="ad_ban_exit_activity"> Segundos después de salir de</string>
+    <string name="ad_ban_exittv">La salida</string>
+    <string name="ad_ban_tip">¡Tip: cerrar la ventana, haga clic en la ventana exterior!</string>
+    <string name="ad_ban_more">Los autores de software más</string>
+    <string name="ad_ban_loading">Antes de descargar una aplicación para la descarga completa todavía, por favor</string>
+    <string name="ad_ban_start_down">Empieza a descargar</string>
+</resources>

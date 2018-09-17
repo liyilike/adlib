@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">สำหรับ Android รุ่นล่าสุด</string>
+    <string name="ad_ban_exit">ออกหลังจาก 4 วินาที</string>
+    <string name="ad_ban_check">ได้โปรดเชื่อผมสั่งคนโฆษณาดูดีหล่อ 24K บริสุทธิ์</string>
+    <string name="ad_ban_exit_activity"> วินาทีหลังจากออกจาก</string>
+    <string name="ad_ban_exittv">ออก</string>
+    <string name="ad_ban_tip">คำแนะนำ : คลิกที่หน้าต่างภายนอกหน้าต่างปิด ! ! ! ! ! ! !</string>
+    <string name="ad_ban_more">ผู้เขียนซอฟต์แวร์เพิ่มเติม</string>
+    <string name="ad_ban_loading">หนึ่งก่อนที่จะทำการดาวน์โหลดอยู่โปรดรอดาวน์โหลดให้เสร็จสมบูรณ์</string>
+    <string name="ad_ban_start_down">เพื่อเริ่มต้นการดาวน์โหลด</string>
+</resources>

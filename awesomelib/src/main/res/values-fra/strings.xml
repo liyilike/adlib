@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">La dernière version androïde</string>
+    <string name="ad_ban_exit">4 secondes après le retrait</string>
+    <string name="ad_ban_check">Je vous prie de me croire un peu de publicité super beau, beau 24K pur</string>
+    <string name="ad_ban_exit_activity"> S après le retrait</string>
+    <string name="ad_ban_exittv">Sortir de</string>
+    <string name="ad_ban_tip">Note: la fermeture de la fenêtre de l'extérieur de la fenêtre en cliquant sur!</string>
+    <string name="ad_ban_more">Plusieurs auteurs de logiciels</string>
+    <string name="ad_ban_loading">Il y a un téléchargement en cours de mise en œuvre, veuillez attendre la fin du téléchargement</string>
+    <string name="ad_ban_start_down">Commence le téléchargement</string>
+</resources>

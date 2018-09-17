@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">най - новата версия на андроид</string>
+    <string name="ad_ban_exit">след 4 секунди.</string>
+    <string name="ad_ban_check">моля те, повярвай ми малко реклама от супер красив човек, 24 карата, чист.</string>
+    <string name="ad_ban_exit_activity"> секунди след като напусна</string>
+    <string name="ad_ban_exittv">изход</string>
+    <string name="ad_ban_tip">съвет: кликни на прозореца отвън затвори прозореца!</string>
+    <string name="ad_ban_more">повече автор на софтуер</string>
+    <string name="ad_ban_loading">преди да сваля още една екзекуция, моля те, чакай да сваля</string>
+    <string name="ad_ban_start_down">започна да сваля</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">Phiên bản mới nhất Android</string>
+    <string name="ad_ban_exit">Thoát sau khi 4 giây.</string>
+    <string name="ad_ban_check">Xin hãy tin tôi. Người quảng cáo siêu đẹp trai, 24K đẹp thuần khiết.</string>
+    <string name="ad_ban_exit_activity"> Sau khi rút lui.</string>
+    <string name="ad_ban_exittv">Rút lui</string>
+    <string name="ad_ban_tip">Gợi ý: nhắp đóng bên ngoài cửa sổ!</string>
+    <string name="ad_ban_more">Nhiều tác giả phần mềm</string>
+    <string name="ad_ban_loading">Trước một tải vẫn còn đang thực hiện, Xin chờ tải về hoàn thành.</string>
+    <string name="ad_ban_start_down">Bắt đầu tải</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+
+    <color name="colorPrimary">@color/colorPrimaryDark</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+  <!--  <color name="color_dialog_gray">#ededf3</color>
+
+    <color name="color_type_info">#79b3e4</color>-->
+</resources>

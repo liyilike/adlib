@@ -1,0 +1,11 @@
+<resources>
+    <string name="ad_ban_android">De nieuwste versie van Android</string>
+    <string name="ad_ban_exit">4 seconden.</string>
+    <string name="ad_ban_check">Geloof me alsjeblieft wat reclame man Super knap, 24 - karaats puur.</string>
+    <string name="ad_ban_exit_activity"> Seconden.</string>
+    <string name="ad_ban_exittv">Uit de</string>
+    <string name="ad_ban_tip">Tip: klik op het raam buiten het raam dicht!</string>
+    <string name="ad_ban_more">De auteurs van software meer</string>
+    <string name="ad_ban_loading">Voor de uitvoering van een download nog steeds wacht downloaden voltooid</string>
+    <string name="ad_ban_start_down">Begin met downloaden</string>
+</resources>
