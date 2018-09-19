@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">den seneste udgave af androide</string>
+    <string name="ad_ban_loading">før et download, er der stadig, vent venligst downloade færdig</string>
+    <string name="ad_ban_start_down">at begynde at downloade</string>
+    <string name="ad_ban_more">flere forfattere. i betragtning af software</string>
+    <string name="ad_ban_please">tro mig: reklame super flot, 24k, ren.</string>
+    <string name="ad_ban_look">gå ind og se</string>
+    <string name="ad_ban_exit">exit -</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">أحدث نسخة من الروبوت</string>
+    <string name="ad_ban_loading">قبل تحميل قيد التنفيذ، يرجى انتظار تحميل كاملة</string>
+    <string name="ad_ban_start_down">يبدأ التحميل</string>
+    <string name="ad_ban_more">الكاتب يدخل هذا عرض المزيد من البرامج</string>
+    <string name="ad_ban_please">صدقوني بعض الإعلانات سوبر وسيم وسيم، 24 قيراط، نقية</string>
+    <string name="ad_ban_look">وانظر</string>
+    <string name="ad_ban_exit">خروج</string>
+</resources>

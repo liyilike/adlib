@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">w najnowszej wersji androida.</string>
+    <string name="ad_ban_loading">wykonanie poprzedniego. pobieranie odbywa się nadal, proszę czekać.</string>
+    <string name="ad_ban_start_down">zacznij ściągać</string>
+    <string name="ad_ban_more">do widzenia, więcej autorów oprogramowania</string>
+    <string name="ad_ban_please">proszę mi wierzyć, że ludzie super przystojny reklamy, 24k, czysta.</string>
+    <string name="ad_ban_look">wejść do środka</string>
+    <string name="ad_ban_exit">wyjście</string>
+</resources>

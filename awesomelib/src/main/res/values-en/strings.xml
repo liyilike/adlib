@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">The latest edition of Android</string>
+    <string name="ad_ban_loading">The previous download is still in execution. Please wait for the download to complete.</string>
+    <string name="ad_ban_start_down">Start downloading</string>
+    <string name="ad_ban_more">More author software points here to view</string>
+    <string name="ad_ban_please">Please believe that I am super handsome, 24K, handsome.</string>
+    <string name="ad_ban_look">Go in and look at it</string>
+    <string name="ad_ban_exit">Sign out</string>
+</resources>

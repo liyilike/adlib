@@ -20,15 +20,6 @@ public class AppActivity extends AppCompatActivity {
 //        AdUtil.getInstance((Activity) mContext).showAD();
     }
 
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (((keyCode == KeyEvent.KEYCODE_BACK) ||
-//                (keyCode == KeyEvent.KEYCODE_HOME))
-//                && event.getRepeatCount() == 0) {
-//            this.startActivity(new Intent(this, ExitActivity.class));
-//        }
-//        return false;
-//    }
-
 
     protected void onPause() {
         super.onPause();

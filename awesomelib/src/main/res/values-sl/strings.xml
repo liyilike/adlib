@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">android je najnovejša različica</string>
+    <string name="ad_ban_loading">download še pred izvedbo naložil, prosim, počakaj.</string>
+    <string name="ad_ban_start_down">začni z nalaganjem.</string>
+    <string name="ad_ban_more">avtor je v mnenju več programske opreme</string>
+    <string name="ad_ban_please">prosim, verjemi mi, da sem seksi oglaševanje ljudi, 24k, čisti.</string>
+    <string name="ad_ban_look">greva pogledat.</string>
+    <string name="ad_ban_exit">izhod</string>
+</resources>

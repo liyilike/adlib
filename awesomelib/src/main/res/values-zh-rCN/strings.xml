@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="ad_ban_android">Android  最新版</string>
+    <string name="ad_ban_loading">前一个下载还在执行,请等待下载完成</string>
+    <string name="ad_ban_start_down">开始下载</string>
+    <string name="ad_ban_more">更多作者软件点此进入查看</string>
+    <string name="ad_ban_please">请相信我点广告的人超帅,24k,纯帅</string>
+    <string name="ad_ban_look">进去看看</string>
+    <string name="ad_ban_exit">退出</string>
+    
+</resources>

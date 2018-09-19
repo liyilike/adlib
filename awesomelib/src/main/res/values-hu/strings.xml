@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">az android a legújabb</string>
+    <string name="ad_ban_loading">ezelőtt még egy letöltött végrehajtó, kérlek várj a letöltés</string>
+    <string name="ad_ban_start_down">a letöltésre.</string>
+    <string name="ad_ban_more">több szerző szoftver ezt belép a képbe.</string>
+    <string name="ad_ban_please">kérlek higgy nekem kicsit reklám, aki dögös, 24k, tiszta.</string>
+    <string name="ad_ban_look">menj be és nézd meg,</string>
+    <string name="ad_ban_exit">visszavonása</string>
+</resources>

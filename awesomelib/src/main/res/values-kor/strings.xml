@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">Android 최신판</string>
+    <string name="ad_ban_loading">다운로드 중 하나 실행 중인데 다운로드 기다리기 완료</string>
+    <string name="ad_ban_start_down">시작 시작</string>
+    <string name="ad_ban_more">그림% 1 개의 캡션을 편집했습니다.</string>
+    <string name="ad_ban_please">믿어주세요. 광고하시는 분 너무 멋져요. 24 k, 순수.</string>
+    <string name="ad_ban_look">들어가 보세요.</string>
+    <string name="ad_ban_exit">퇴출</string>
+</resources>

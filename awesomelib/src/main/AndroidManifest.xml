@@ -32,14 +32,8 @@
                 android:resource="@xml/gdt_file_path" />
         </provider>
 
-        <activity android:name="com.banner.integrationsdk.activity.AdActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
         <activity android:name="com.banner.integrationsdk.myad.MyAdBanner"
             android:theme="@style/AdTheme" />
-
-        <activity android:name="com.banner.integrationsdk.activity.ExitActivity"
-            android:theme="@style/MyDialogStyle" />
 
         <activity android:name="com.banner.integrationsdk.update.UpActivity"
             android:theme="@style/MyDialogStyle" />

@@ -67,11 +67,10 @@ public class ExitDialog extends Dialog {
     public void timeTask() {
         if (adImg.getVisibility() == View.VISIBLE) {
             adImg.setVisibility(View.GONE);
-            text.setText("更多作者软件点此进入查看");
+            text.setText(mContext.getString(R.string.ad_ban_more));
         } else {
             adImg.setVisibility(View.VISIBLE);
-            text.setText("请相信我点广告的人超帅,24k,纯帅");
-
+            text.setText(mContext.getString(R.string.ad_ban_please));
         }
         mHandler.sendEmptyMessageDelayed(0, 5000);
     }
@@ -102,7 +101,7 @@ public class ExitDialog extends Dialog {
                 } else {
                     mContext.startActivity(new Intent(mContext, MyAdBanner.class));
                 }
-                dismiss();
+//                dismiss();
             }
         });
         left = (View) findViewById(R.id.left);

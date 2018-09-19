@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">e cea mai nouă versiune</string>
+    <string name="ad_ban_loading">încă o descărcare completă, te rog aşteaptă</string>
+    <string name="ad_ban_start_down">începe descărcarea</string>
+    <string name="ad_ban_more">- asta intră la mai mult de software</string>
+    <string name="ad_ban_please">crede - mă, te rog. reclame. sexy, 24.000 de pur.</string>
+    <string name="ad_ban_look">uită - te înăuntru</string>
+    <string name="ad_ban_exit">retragerea</string>
+</resources>

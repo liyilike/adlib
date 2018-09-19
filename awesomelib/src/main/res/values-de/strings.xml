@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">Die Android - version</string>
+    <string name="ad_ban_loading">Einen download - noch vor der umsetzung, bitte warten sie, bis der download abgeschlossen</string>
+    <string name="ad_ban_start_down">Starten sie den download</string>
+    <string name="ad_ban_more">Die autoren - software mehr sehen</string>
+    <string name="ad_ban_please">Bitte glauben sie Mir, dass Ich die leute Werbung cool, 24 Karat, Reine Schön</string>
+    <string name="ad_ban_look">Reingehen.</string>
+    <string name="ad_ban_exit">Exit</string>
+</resources>

@@ -2,7 +2,7 @@
 <resources>
 
 
-    <!-- Base application theme. -->
+    <!-- 我自己的app广告的activity -->
     <style name="AdTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -14,7 +14,7 @@
         <!-- 继承actionbar并重写 -->
     </style>
 
-
+    <!--开始弹出和结束弹出的dialog-->
     <style name="MyDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowFrame">@null</item>
@@ -27,8 +27,7 @@
     </style>
 
 
-
-
+    <!--升级的dialog-->
     <style name="UpdateAppDialog" parent="android:style/Theme.Dialog">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>

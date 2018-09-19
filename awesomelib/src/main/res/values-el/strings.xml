@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">Το ανδροειδές την τελευταία έκδοση</string>
+    <string name="ad_ban_loading">να κατεβάσει ένα ακόμα πριν από την εφαρμογή, σε παρακαλώ, περίμενε το κατέβασμα ολοκληρώθηκε</string>
+    <string name="ad_ban_start_down">να το κατεβάσω</string>
+    <string name="ad_ban_more">Το λογισμικό αυτό μπαίνει άποψη περισσότερο συγγραφέας</string>
+    <string name="ad_ban_please">Σε παρακαλώ πίστεψέ με διαφήμιση που πολύ όμορφος, 24ων, καθαρή όμορφος</string>
+    <string name="ad_ban_look">πάμε μέσα και να δούμε</string>
+    <string name="ad_ban_exit">Απόσυρση</string>
+</resources>

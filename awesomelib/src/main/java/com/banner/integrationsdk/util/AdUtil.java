@@ -52,18 +52,14 @@ public class AdUtil {
         admob_BAN = mContext.getString(R.string.admob_ban);
         //初始化谷歌广告的id
         MobileAds.initialize(mContext, mContext.getString(R.string.admob_id));
-
-
     }
-
-
 
 
     public void showAD() {
         Locale locale = mContext.getResources().getConfiguration().locale;
         String language = locale.getLanguage();
-        if(!language.equals("zh")){
-           InterstitialGoogleAD(new ADCallBackInterface() {
+        if (!language.equals("zh")) {
+            InterstitialGoogleAD(new ADCallBackInterface() {
                 @Override
                 public void onADReceive() {
 
@@ -85,7 +81,6 @@ public class AdUtil {
             });
             return;
         }
-
 
 
         InterstitialAD(new ADCallBackInterface() {
@@ -111,7 +106,6 @@ public class AdUtil {
         });
 
     }
-
 
 
     public static void QQBan(ViewGroup banner, final ADCallBackInterface adCallBackInterface) {
@@ -229,15 +223,14 @@ public class AdUtil {
     }
 
     public static void SplashAD(ViewGroup adContainer, View skipContainer, int fetchDelay, final ADCallBackInterface adCallBackInterface) {
-
-//      splashAD = new SplashAD(mContext, adContainer, skipContainer, mContext.getString(R.string.gdt_ID),mContext.getString(R.string.gdt_Splash), new SplashADListener() {
-        splashAD = new SplashAD(mContext, adContainer, skipContainer,qqID, qq_SP_KEY, new SplashADListener() {
+        splashAD = new SplashAD(mContext, adContainer, skipContainer, qqID, qq_SP_KEY, new SplashADListener() {
             @Override
             public void onADDismissed() {
                 if (adCallBackInterface != null) {
                     adCallBackInterface.onADClosed();
                 }
             }
+
             @Override
             public void onNoAD(AdError adError) {
                 if (adCallBackInterface != null) {
@@ -269,7 +262,6 @@ public class AdUtil {
             }
         }, fetchDelay);
     }
-
 
 
 }

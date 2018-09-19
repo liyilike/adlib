@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">co 新版 android</string>
+    <string name="ad_ban_loading">ještě pořád si stahování dokončeno plnění, počkejte prosím.</string>
+    <string name="ad_ban_start_down">začněte stahovat</string>
+    <string name="ad_ban_more">autoři softwaru víc poukázat na dohled</string>
+    <string name="ad_ban_please">prosím, věř mi trochu reklamy jsou super pohledný, 24k, čistá.</string>
+    <string name="ad_ban_look">podívej se dovnitř</string>
+    <string name="ad_ban_exit">stažení</string>
+</resources>

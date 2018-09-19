@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">den senaste versionen av android</string>
+    <string name="ad_ban_loading">ladda ner en fortfarande genomföras innan, vänta på att ladda ner</string>
+    <string name="ad_ban_start_down">börja med att ladda ner</string>
+    <string name="ad_ban_more">det kommer in mer författare för programvara</string>
+    <string name="ad_ban_please">snälla tro på mig lite reklam. så -, ren.</string>
+    <string name="ad_ban_look">gå in och titta på</string>
+    <string name="ad_ban_exit">sluta</string>
+</resources>

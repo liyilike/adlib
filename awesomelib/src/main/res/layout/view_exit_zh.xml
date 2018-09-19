@@ -17,8 +17,6 @@
         android:paddingRight="10dp">
 
 
-
-
         <ImageView
             android:id="@+id/myban"
             android:layout_width="match_parent"
@@ -32,27 +30,26 @@
             android:id="@+id/adimg"
             android:layout_width="match_parent"
             android:layout_height="167dp"
-            android:layout_alignParentBottom="true"
-            />
+            android:layout_alignParentBottom="true" />
 
 
         <TextView
             android:id="@+id/tv"
-            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:gravity="center_vertical"
-            android:textColor="#FFFFFF"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
             android:background="#80000000"
-            android:textSize="15sp"
-            android:paddingLeft="8dp"
-            android:text="请相信我点广告的人超帅,24k,纯帅"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
-            android:focusableInTouchMode="true"
-            android:focusable="true"
             android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="8dp"
+            android:scrollHorizontally="true"
             android:singleLine="true"
-            android:layout_height="30dp" />
+            android:text="@string/ad_ban_please"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
 
 
     </RelativeLayout>
@@ -72,15 +69,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/rectangle_26_copy"
-            android:text="进去看看"
+            android:text="@string/ad_ban_look"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
-        <!--            <ImageView
-                        android:id="@+id/left"
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/selector_exit_left_but"/>-->
 
         <View
             android:layout_width="20dp"
@@ -93,26 +84,12 @@
             android:layout_toRightOf="@+id/left"
             android:layout_weight="1"
             android:background="@drawable/rectangle_26_copy"
-            android:text="退出"
+            android:text="@string/ad_ban_exit"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <!--  <ImageView
-              android:id="@+id/right"
-              android:layout_toRightOf="@+id/left"
-              android:layout_weight="1"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/selector_exit_right_but"/>-->
 
     </LinearLayout>
 
-    <!--<ImageView
-        android:id="@+id/cancel"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/icon_ads_close"/>-->
 
 </RelativeLayout>

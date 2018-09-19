@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">androidin uusin versio</string>
+    <string name="ad_ban_loading">sitten vielä yksi ladata suorittaa loppuun, odota.</string>
+    <string name="ad_ban_start_down">alkoi ladata</string>
+    <string name="ad_ban_more">lisää laatija ohjelmistojen tämä tulee nähdä</string>
+    <string name="ad_ban_please">usko minua, mainos erittäin komea mies, 24 karaatin, puhdasta.</string>
+    <string name="ad_ban_look">mennä katsomaan.</string>
+    <string name="ad_ban_exit">opt - out -</string>
+</resources>

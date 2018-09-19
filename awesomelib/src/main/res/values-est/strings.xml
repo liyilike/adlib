@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">android on viimane versioon,</string>
+    <string name="ad_ban_loading">on veel üks alla laadida, palun oota.</string>
+    <string name="ad_ban_start_down">peale laadida</string>
+    <string name="ad_ban_more">see siseneb näha rohkem kirjanik tarkvara.</string>
+    <string name="ad_ban_please">palun usu mind, punkt 24, reklaam, kes nii väga kena ja puhas</string>
+    <string name="ad_ban_look">vaata</string>
+    <string name="ad_ban_exit">loobumine</string>
+</resources>

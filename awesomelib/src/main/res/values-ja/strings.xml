@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">Android最新版</string>
+    <string name="ad_ban_loading">前のダウンロードはまだ実行されていますので、ダウンロード完了をお待ちください</string>
+    <string name="ad_ban_start_down">ダウンロード開始</string>
+    <string name="ad_ban_more">多くの作者のソフトウェアポイントを参照してください</string>
+    <string name="ad_ban_please">私の広告を注文する人はかっこいいし、24 k、純イケメン</string>
+    <string name="ad_ban_look">入ってみる</string>
+    <string name="ad_ban_exit">脱退する</string>
+</resources>

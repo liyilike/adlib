@@ -1,0 +1,9 @@
+<resources>
+    <string name="ad_ban_android">La versión más reciente de Android.</string>
+    <string name="ad_ban_loading">La primera descarga sigue en marcha, por favor espere a que se descargen.</string>
+    <string name="ad_ban_start_down">Empiecen a descargar.</string>
+    <string name="ad_ban_more">Un poco más de software para ver</string>
+    <string name="ad_ban_please">Por favor, confía en mí.</string>
+    <string name="ad_ban_look">Vamos a echar un ojo.</string>
+    <string name="ad_ban_exit">Retiro</string>
+</resources>
