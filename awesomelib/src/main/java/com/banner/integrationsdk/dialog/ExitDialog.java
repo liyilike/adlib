@@ -60,7 +60,7 @@ public class ExitDialog extends Dialog {
 
     public ExitDialog(@NonNull Context context, int themeResId) {
         super(context, themeResId);
-        mContext = (Context) context;
+        mContext = context;
     }
 
 
