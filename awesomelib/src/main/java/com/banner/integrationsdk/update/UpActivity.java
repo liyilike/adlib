@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.liyi.R;
+import com.banner.integrationsdk.R;
 
 import java.io.File;
 

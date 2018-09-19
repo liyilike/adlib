@@ -97,7 +97,7 @@ public class ExitActivity extends AppCompatActivity {
         setView();
         mContext = this;
         initview();
-        qqban();
+//        qqban();
     }
 
 

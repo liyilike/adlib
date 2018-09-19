@@ -1,15 +1,30 @@
 <resources>
+    <!--<string name="admob_ban"></string>-->
+    <!--<string name="admob_iad"></string>-->
+    <!--<string name="qq_ad_id"></string>-->
+    <!--<string name="qq_ban_key"></string>-->
+    <!--<string name="qq_iad_key"></string>-->
+    <!--<string name="youmeng"></string>-->
+    <!--&lt;!&ndash; 自己的更新 &ndash;&gt;-->
+    <!--<string name="apk_more_down">https://liyicool.github.io/app/more/index.html</string>-->
+    <!--<string name="apk_update_down">https://liyicool.github.io/app/update/apk/</string>-->
+    <!--<string name="apk_update_web">https://liyicool.github.io/app/update/index.html</string>-->
+
+
+    <string name="admob_id"></string>
     <string name="admob_ban"></string>
     <string name="admob_iad"></string>
-    <string name="qq_ad_id"></string>
-    <string name="qq_ban_key"></string>
-    <string name="qq_iad_key"></string>
-    <string name="youmeng"></string>
-    <!-- 自己的更新 -->
-    <string name="apk_more_down">https://liyicool.github.io/app/more/index.html</string>
-    <string name="apk_update_down">https://liyicool.github.io/app/update/apk/</string>
-    <string name="apk_update_web">https://liyicool.github.io/app/update/index.html</string>
+    <string name="qq_ad_id">1106936448</string>
+    <string name="qq_sp_key">5000530404252601</string>
+    <string name="qq_native_key">3010934444051045</string>
+    <string name="qq_ban_key">3010934444051045</string>
+    <string name="qq_iad_key">3010934444051045</string>
+    <string name="youmeng">5b0bd695a40fa3723700008a</string>
 
+
+    <string name="apk_more_down">https://developer.apktool.net/more/index.html</string>
+    <string name="apk_update_down">https://developer.apktool.net/update/apk/</string>
+    <string name="apk_update_web">https://developer.apktool.net/update/index.html</string>
 
     <!--    <string name="ad_ban_android">Android  最新版</string>
         <string name="ad_ban_exit">4 秒后退出</string>
@@ -22,13 +37,22 @@
         <string name="ad_ban_more">更多作者软件</string>
 
         -->
-    <string name="ad_ban_android">The latest version of Android</string>
-    <string name="ad_ban_exit">4 seconds after the exit</string>
-    <string name="ad_ban_check">Please believe that the person I ordered is super handsome and 24K is pure and handsome.</string>
-    <string name="ad_ban_exit_activity"> Second exit</string>
-    <string name="ad_ban_exittv">Sign out</string>
-    <string name="ad_ban_tip">Hint: click window to close the window outside!</string>
-    <string name="ad_ban_more">More author software</string>
-    <string name="ad_ban_loading">The previous download is still in execution, please wait for the download to complete</string>
-    <string name="ad_ban_start_down">Start downloading</string>
+    <string name="ad_ban_exit">4 秒后退出</string>
+    <string name="ad_ban_check">请相信我点了广告的人超帅,24K纯帅</string>
+    <string name="ad_ban_exit_activity"> 秒后退出</string>
+    <string name="ad_ban_exittv">退出</string>
+    <string name="ad_ban_tip">提示: 点击窗口外部关闭窗口!</string>
+    <string name="ad_ban_more">更多作者软件</string>
+    <string name="ad_ban_loading">前一个下载还在执行,请等待下载完成</string>
+    <string name="ad_ban_start_down">开始下载</string>
+
+    <!--<string name="ad_ban_android">The latest version of Android</string>-->
+    <!--<string name="ad_ban_exit">4 seconds after the exit</string>-->
+    <!--<string name="ad_ban_check">Please believe that the person I ordered is super handsome and 24K is pure and handsome.</string>-->
+    <!--<string name="ad_ban_exit_activity"> Second exit</string>-->
+    <!--<string name="ad_ban_exittv">Sign out</string>-->
+    <!--<string name="ad_ban_tip">Hint: click window to close the window outside!</string>-->
+    <!--<string name="ad_ban_more">More author software</string>-->
+    <!--<string name="ad_ban_loading">The previous download is still in execution, please wait for the download to complete</string>-->
+    <!--<string name="ad_ban_start_down">Start downloading</string>-->
 </resources>

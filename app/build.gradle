@@ -4,7 +4,7 @@ android {
   compileSdkVersion rootProject.compileSdkVersion
   buildToolsVersion rootProject.buildToolsVersion
   defaultConfig {
-    applicationId "com.liyi.apps.adlib"
+    applicationId "com.liyi.apps.qutv"
     minSdkVersion rootProject.minSdkVersion
     targetSdkVersion rootProject.targetSdkVersion
     versionCode 1

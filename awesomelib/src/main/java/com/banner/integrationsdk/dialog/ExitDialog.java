@@ -7,42 +7,55 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.banner.integrationsdk.R;
 import com.banner.integrationsdk.myad.MyAdBanner;
-import com.liyi.R;
 import com.qq.e.ads.cfg.VideoOption;
 import com.qq.e.ads.nativ.ADSize;
-import com.qq.e.ads.nativ.NativeAD;
 import com.qq.e.ads.nativ.NativeADDataRef;
 import com.qq.e.ads.nativ.NativeExpressAD;
 import com.qq.e.ads.nativ.NativeExpressADView;
 import com.qq.e.comm.util.AdError;
 import com.umeng.analytics.MobclickAgent;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 
 import static android.content.Context.ACTIVITY_SERVICE;
 
 public class ExitDialog extends Dialog {
 
-    Activity mContext;
-    private NativeAD nativeAD;
+    private Activity mContext;
     private NativeADDataRef adItem;
     private ViewGroup adImg;
-    private View layout;
-    View left, right, cancel;
+    private View layout, myban;
+    private View left, right;
+    private TextView text;
     private NativeExpressADView nativeExpressADView;
+    private Handler mHandler = new MyHandler(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_exit_zh);
         initView();
         loadAD();
+        mHandler.sendEmptyMessageDelayed(0, 5000);
+    }
+
+    @Override
+    public void setOnDismissListener(@Nullable OnDismissListener listener) {
+        super.setOnDismissListener(listener);
+        mHandler.removeMessages(0);
     }
 
     public ExitDialog(@NonNull Context context, int themeResId) {
@@ -50,8 +63,29 @@ public class ExitDialog extends Dialog {
         mContext = (Activity) context;
     }
 
+
+    public void timeTask() {
+        if (adImg.getVisibility() == View.VISIBLE) {
+            adImg.setVisibility(View.GONE);
+            text.setText("更多作者软件点此进入查看");
+        } else {
+            adImg.setVisibility(View.VISIBLE);
+            text.setText("请相信我点广告的人超帅,24k,纯帅");
+
+        }
+        mHandler.sendEmptyMessageDelayed(0, 5000);
+    }
+
     //初始化并加载广告
     public void initView() {
+        myban = (View) findViewById(R.id.myban);
+        myban.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mContext.startActivity(new Intent(mContext, MyAdBanner.class));
+            }
+        });
+        text = (TextView) findViewById(R.id.tv);
         layout = (View) findViewById(R.id.exit_lin);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,28 +97,32 @@ public class ExitDialog extends Dialog {
         adImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (adItem!=null){
+                if (adItem != null) {
                     adItem.onClicked(view);
-                }else{
+                } else {
                     mContext.startActivity(new Intent(mContext, MyAdBanner.class));
                 }
                 dismiss();
             }
         });
         left = (View) findViewById(R.id.left);
-
         left.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dismiss();
-                if (nativeExpressADView!=null) {
-                    setSimulateClick(nativeExpressADView, 0, 0);
-                }else{
+//                dismiss();
+                if (adImg.getVisibility() == View.VISIBLE) {
+                    if (nativeExpressADView != null) {
+                        setSimulateClick(nativeExpressADView, 0, 0);
+                    } else {
+                        mContext.startActivity(new Intent(mContext, MyAdBanner.class));
+                    }
+                } else {
+                    adImg.setVisibility(View.GONE);
                     mContext.startActivity(new Intent(mContext, MyAdBanner.class));
                 }
+
             }
         });
-
         right = (View) findViewById(R.id.right);
         right.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,10 +148,9 @@ public class ExitDialog extends Dialog {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-    dismiss();
+        dismiss();
         return true;
     }
-
 
     private void setSimulateClick(View view, float x, float y) {
         long downTime = SystemClock.uptimeMillis();
@@ -127,12 +164,8 @@ public class ExitDialog extends Dialog {
         upEvent.recycle();
     }
 
-
     //初始化并加载广告
     public void loadAD() {
-
-
-
         NativeExpressAD nativeExpressAD = new NativeExpressAD(mContext, new ADSize(ADSize.FULL_WIDTH, ADSize.AUTO_HEIGHT), mContext.getString(R.string.qq_ad_id), mContext.getString(R.string.qq_native_key), new NativeExpressAD.NativeExpressADListener() {
             @Override
             public void onNoAD(AdError adError) {
@@ -199,7 +232,6 @@ public class ExitDialog extends Dialog {
             }
         });
         // 这里的Context必须为Activity
-
         nativeExpressAD.setVideoOption(new VideoOption.Builder()
                 .setAutoPlayPolicy(VideoOption.AutoPlayPolicy.WIFI) // 设置什么网络环境下可以自动播放视频
                 .setAutoPlayMuted(true) // 设置自动播放视频时，是否静音
@@ -209,49 +241,25 @@ public class ExitDialog extends Dialog {
     }
 
 
-//    //初始化并加载广告
-//    public void loadAD() {
-//        if (nativeAD == null) {
-//            this.nativeAD = new NativeAD(mContext, mContext.getString(R.string.qq_ad_id), mContext.getString(R.string.qq_native), new NativeAD.NativeAdListener() {
-//                @Override
-//                public void onADLoaded(List<NativeADDataRef> list) {
-//                    if (list.size() > 0) {
-//                        adItem = list.get(0);
-//                        showAD();
-////                        Toast.makeText(mContext, "原生广告加载成功", Toast.LENGTH_LONG).show();
-//                    } else {
-//                        Log.i("AD_DEMO", "NOADReturn");
-//                    }
-//                }
-//
-//                @Override
-//                public void onNoAD(AdError adError) {
-//
-//                }
-//
-//                @Override
-//                public void onADStatusChanged(NativeADDataRef nativeADDataRef) {
-//
-//                }
-//
-//                @Override
-//                public void onADError(NativeADDataRef nativeADDataRef, AdError adError) {
-//
-//                }
-//            });
-//        }
-//        int count = 1; // 一次拉取的广告条数：范围1-10
-//        nativeAD.loadAD(count);
-//    }
-//
-//    public void showAD() {
-//        if (adItem.getAdPatternType() == AdPatternType.NATIVE_3IMAGE) {
-//        } else if (adItem.getAdPatternType() == AdPatternType.NATIVE_2IMAGE_2TEXT) {
-//                adImg.setImageURI(Uri.parse(adItem.getImgUrl()));
-//        } else if (adItem.getAdPatternType() == AdPatternType.NATIVE_1IMAGE_2TEXT) {
-//        }
-//        adItem.onExposured(adImg); // 需要先调用曝光接口
-//    }
+    static class MyHandler extends Handler {
+        WeakReference<ExitDialog> mActivity;
+
+        public MyHandler(ExitDialog activity) {
+            mActivity = new WeakReference<ExitDialog>(activity);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            ExitDialog Activity = mActivity.get();
+            switch (msg.what) {
+                case 0:
+                    Activity.timeTask();
+                    break;
+            }
+        }
+
+    }
+
 
 }
 

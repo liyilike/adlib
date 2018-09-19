@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_lin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/adRel"
+        android:layout_width="wrap_content"
+        android:layout_height="274dp"
+        android:background="@drawable/img_tebietuijian"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp">
+
+
+
+
+        <ImageView
+            android:id="@+id/myban"
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/myban"
+            android:scaleType="centerCrop" />
+
+
+        <FrameLayout
+            android:id="@+id/adimg"
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:layout_alignParentBottom="true"
+            />
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="#FFFFFF"
+            android:background="#80000000"
+            android:textSize="15sp"
+            android:paddingLeft="8dp"
+            android:text="请相信我点广告的人超帅,24k,纯帅"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:layout_height="30dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_alignLeft="@+id/adRel"
+        android:layout_below="@+id/adRel"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_26_copy"
+            android:text="进去看看"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+        <!--            <ImageView
+                        android:id="@+id/left"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/selector_exit_left_but"/>-->
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/left"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_26_copy"
+            android:text="退出"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <!--  <ImageView
+              android:id="@+id/right"
+              android:layout_toRightOf="@+id/left"
+              android:layout_weight="1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/selector_exit_right_but"/>-->
+
+    </LinearLayout>
+
+    <!--<ImageView
+        android:id="@+id/cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/icon_ads_close"/>-->
+
+</RelativeLayout>

@@ -21,9 +21,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.banner.integrationsdk.Interface.JavaScriptinterface;
+import com.banner.integrationsdk.R;
 import com.banner.integrationsdk.util.AndroidUtil;
-import com.liyi.R;
-import com.liyi.fragmet.IndexOne;
 
 import java.lang.ref.WeakReference;
 

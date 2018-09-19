@@ -5,7 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.liyi.R;
+
+import com.banner.integrationsdk.R;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
