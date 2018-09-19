@@ -21,5 +21,6 @@ android {
 dependencies {
   implementation fileTree(include: ['*.jar'], dir: 'libs')
   implementation var.SV7
-  implementation project(':awesomelib')
+  implementation 'com.github.liyilike:adlib:1.0.2'
+//  implementation project(':awesomelib')
 }

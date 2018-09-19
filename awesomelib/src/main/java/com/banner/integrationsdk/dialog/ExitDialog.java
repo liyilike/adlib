@@ -34,7 +34,7 @@ import static android.content.Context.ACTIVITY_SERVICE;
 
 public class ExitDialog extends Dialog {
 
-    private Activity mContext;
+    private Context mContext;
     private NativeADDataRef adItem;
     private ViewGroup adImg;
     private View layout, myban;
@@ -60,7 +60,7 @@ public class ExitDialog extends Dialog {
 
     public ExitDialog(@NonNull Context context, int themeResId) {
         super(context, themeResId);
-        mContext = (Activity) context;
+        mContext = (Context) context;
     }
 
 
@@ -128,7 +128,7 @@ public class ExitDialog extends Dialog {
             @Override
             public void onClick(View view) {
                 MobclickAgent.onKillProcess(mContext);
-                mContext.finish();
+//                mContext.finish();
                 int currentVersion = Build.VERSION.SDK_INT;
                 if (currentVersion > Build.VERSION_CODES.ECLAIR_MR1) {
                     Intent startMain = new Intent(Intent.ACTION_MAIN);
