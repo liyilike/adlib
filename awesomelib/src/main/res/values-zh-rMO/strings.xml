@@ -1,5 +1,5 @@
 <resources>
-    <string name="ad_ban_android">Android最新版</string>
+    <string name="ad_ban_android">Android最新版本</string>
     <string name="ad_ban_loading">前一個下載還在執行，請等待下載完成</string>
     <string name="ad_ban_start_down">開始下載</string>
     <string name="ad_ban_more">更多作者軟件點此進入查看</string>

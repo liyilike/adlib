@@ -1,5 +1,5 @@
 <resources>
-    <string name="ad_ban_android">Android最新版</string>
+    <string name="ad_ban_android">Android最新バージョン</string>
     <string name="ad_ban_loading">前のダウンロードはまだ実行されていますので、ダウンロード完了をお待ちください</string>
     <string name="ad_ban_start_down">ダウンロード開始</string>
     <string name="ad_ban_more">多くの作者のソフトウェアポイントを参照してください</string>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="ad_ban_android">последнее издание андроида</string>
+    <string name="ad_ban_android">последняя версия анроид</string>
     <string name="ad_ban_loading">последний загружается в исполнении, пожалуйста, ждите завершения загрузки</string>
     <string name="ad_ban_start_down">Начать загрузку</string>
     <string name="ad_ban_more">больше авторского программного обеспечения для просмотра</string>

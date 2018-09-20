@@ -1,5 +1,5 @@
 <resources>
-    <string name="ad_ban_android">รุ่นล่าสุดของ Android</string>
+    <string name="ad_ban_android">สำหรับ Android รุ่นล่าสุด</string>
     <string name="ad_ban_loading">หนึ่งก่อนที่จะทำการดาวน์โหลดอยู่โปรดรอดาวน์โหลดให้เสร็จสมบูรณ์</string>
     <string name="ad_ban_start_down">เพื่อเริ่มต้นการดาวน์โหลด</string>
     <string name="ad_ban_more">ดูเพิ่มเติมที่ผู้เขียนซอฟต์แวร์นี้เข้าสู่</string>

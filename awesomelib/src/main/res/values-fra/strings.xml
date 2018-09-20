@@ -1,9 +1,9 @@
 <resources>
-    <string name="ad_ban_android">Dernière version androïde</string>
+    <string name="ad_ban_android">La dernière version androïde</string>
     <string name="ad_ban_loading">Il y a un téléchargement en cours de mise en œuvre, veuillez attendre la fin du téléchargement</string>
     <string name="ad_ban_start_down">Commence le téléchargement</string>
-    <string name="ad_ban_more">L'auteur de cette entrée de visualiser plus de logiciel</string>
-    <string name="ad_ban_please">Je crois que j'ai peu de publicité super beau, 24 carats, pur, beau</string>
+    <string name="ad_ban_more">L\'auteur de cette entrée de visualiser plus de logiciel</string>
+    <string name="ad_ban_please">Je crois que j\'ai peu de publicité super beau, 24 carats, pur, beau</string>
     <string name="ad_ban_look">Aller voir</string>
     <string name="ad_ban_exit">Sortir de</string>
 </resources>

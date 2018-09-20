@@ -1,5 +1,5 @@
 <resources>
-    <string name="ad_ban_android">Die Android - version</string>
+    <string name="ad_ban_android">Die Neueste Android - version</string>
     <string name="ad_ban_loading">Einen download - noch vor der umsetzung, bitte warten sie, bis der download abgeschlossen</string>
     <string name="ad_ban_start_down">Starten sie den download</string>
     <string name="ad_ban_more">Die autoren - software mehr sehen</string>

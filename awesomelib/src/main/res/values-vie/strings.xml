@@ -1,5 +1,5 @@
 <resources>
-    <string name="ad_ban_android">Một ấn bản mới nhất Android</string>
+    <string name="ad_ban_android">Phiên bản mới nhất Android</string>
     <string name="ad_ban_loading">Trước một tải vẫn còn đang thực hiện, Xin chờ tải về hoàn thành.</string>
     <string name="ad_ban_start_down">Bắt đầu tải</string>
     <string name="ad_ban_more">Nhiều phần mềm này tác giả vào xem.</string>
