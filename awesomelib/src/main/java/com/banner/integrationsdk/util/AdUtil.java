@@ -23,7 +23,7 @@ public class AdUtil {
     private static AdUtil Instance = null;
     private static Activity mContext;
     private static InterstitialAD iad;
-    //    private static InterstitialAd interstitialAd;
+//    private static InterstitialAd interstitialAd;
     private static SplashAD splashAD;
     private static String qqID = null, qq_IAD_KEY = null, qq_BAN_KEY = null, qq_SP_KEY = null;
 //            , admob_BAN = null, admob_IAD = null;

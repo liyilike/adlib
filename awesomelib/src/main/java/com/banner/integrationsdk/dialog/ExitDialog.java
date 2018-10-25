@@ -49,7 +49,7 @@ public class ExitDialog extends Dialog {
         setContentView(R.layout.view_exit_zh);
         initView();
         loadAD();
-        mHandler.sendEmptyMessageDelayed(0, 5000);
+        mHandler.sendEmptyMessageDelayed(0, 4000);
     }
 
     @Override
@@ -72,7 +72,7 @@ public class ExitDialog extends Dialog {
             adImg.setVisibility(View.VISIBLE);
             text.setText(mContext.getString(R.string.ad_ban_please));
         }
-        mHandler.sendEmptyMessageDelayed(0, 5000);
+        mHandler.sendEmptyMessageDelayed(0, 4000);
     }
 
     //初始化并加载广告

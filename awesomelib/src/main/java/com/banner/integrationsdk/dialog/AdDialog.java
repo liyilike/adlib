@@ -40,7 +40,6 @@ public class AdDialog extends Dialog  {
         loadAD();
     }
 
-
     private void setSimulateClick(View view, float x, float y) {
         long downTime = SystemClock.uptimeMillis();
         final MotionEvent downEvent = MotionEvent.obtain(downTime, downTime,

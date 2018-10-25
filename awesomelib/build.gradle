@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 // Required plugin in library module
-apply plugin: 'com.github.dcendents.android-maven'
-
-// Replace nisrulz with <your_github_username>
-group='com.github.liyilike'
+//apply plugin: 'com.github.dcendents.android-maven'
+//
+//// Replace nisrulz with <your_github_username>
+//group='com.github.liyilike'
 
 android {
   compileSdkVersion rootProject.compileSdkVersion
-  buildToolsVersion '28.0.3'
+  buildToolsVersion rootProject.buildToolsVersion
 //支持xml上的app:srcCompat
   defaultConfig {
     minSdkVersion rootProject.minSdkVersion

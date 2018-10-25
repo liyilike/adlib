@@ -12,7 +12,9 @@
     <string name="qq_ban_key"></string>
     <!--直接弹出的广告-->
     <string name="qq_iad_key"></string>
-    <string name="youmeng"></string>
+    <!--友盟-->
+    <string name="um_appkey"></string>
+    <string name="um_channel"></string>
 
     <string name="apk_more_down">https://developer.apktool.net/more/index.html</string>
     <string name="apk_update_down">https://developer.apktool.net/update/apk/</string>
