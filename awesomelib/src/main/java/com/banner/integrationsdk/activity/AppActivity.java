@@ -15,7 +15,8 @@ public class AppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
-        UMConfigure.init(mContext, UMConfigure.DEVICE_TYPE_PHONE, getString(R.string.um_appkey));
+//        UMConfigure.init(mContext, UMConfigure.DEVICE_TYPE_PHONE, getString(R.string.um_appkey));
+        UMConfigure.init(mContext, getString(R.string.um_appkey),getString(R.string.um_channel) , UMConfigure.DEVICE_TYPE_PHONE, "");
         new UpUtil(mContext).init();
 //        AdUtil.getInstance((Activity) mContext).showAD();
     }
