@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
   compileSdkVersion rootProject.compileSdkVersion
-  buildToolsVersion rootProject.buildToolsVersion
+  buildToolsVersion '28.0.3'
   defaultConfig {
     applicationId "com.liyi.apps.qutv"
     minSdkVersion rootProject.minSdkVersion

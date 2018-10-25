@@ -8,7 +8,7 @@ group='com.github.liyilike'
 
 android {
   compileSdkVersion rootProject.compileSdkVersion
-  buildToolsVersion rootProject.buildToolsVersion
+  buildToolsVersion '28.0.3'
 //支持xml上的app:srcCompat
   defaultConfig {
     minSdkVersion rootProject.minSdkVersion
@@ -28,7 +28,7 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation 'com.google.android.gms:play-services-ads:+'
+//  implementation 'com.google.android.gms:play-services-ads:+'
   implementation 'com.umeng.sdk:common:latest.integration'
   implementation 'com.umeng.sdk:analytics:latest.integration'
   implementation var.SV7
