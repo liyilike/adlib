@@ -30,7 +30,7 @@ public class AdUtil {
     private static InterstitialAD iad;
     private static InterstitialAd mInterstitialAd;
     private static SplashAD splashAD;
-    private static String qqID, qq_IAD_KEY , qq_BAN_KEY , qq_SP_KEY , admob_BAN , admob_IAD,admob_ID ;
+    private static String qqID, qq_IAD_KEY, qq_BAN_KEY, qq_SP_KEY, admob_BAN, admob_IAD, admob_ID;
 
     public static AdUtil getInstance(Activity Context) {
         mContext = Context;
@@ -108,7 +108,7 @@ public class AdUtil {
 //        });
     }
 
-    public static void QQBan(ViewGroup banner, final ADCallBackInterface adCallBackInterface) {
+    public void QQBan(ViewGroup banner, final ADCallBackInterface adCallBackInterface) {
         BannerView bv = new BannerView(mContext, ADSize.BANNER, qqID, qq_BAN_KEY);
         bv.setRefresh(30);
         bv.setADListener(new AbstractBannerADListener() {
@@ -176,7 +176,7 @@ public class AdUtil {
     }
 
 
-    public static void InterstitialGoogleAD(final ADCallBackInterface adCallBackInterface) {
+    public void InterstitialGoogleAD(final ADCallBackInterface adCallBackInterface) {
 //        MobileAds.initialize(mContext, admob_ID);
         mInterstitialAd = new InterstitialAd(mContext);
         mInterstitialAd.setAdUnitId(admob_IAD);
@@ -216,7 +216,7 @@ public class AdUtil {
         mInterstitialAd.loadAd(adRequest);
     }
 
-    public static void SplashAD(ViewGroup adContainer, View skipContainer, int fetchDelay, final ADCallBackInterface adCallBackInterface) {
+    public void SplashAD(ViewGroup adContainer, View skipContainer, int fetchDelay, final ADCallBackInterface adCallBackInterface) {
         splashAD = new SplashAD(mContext, adContainer, skipContainer, qqID, qq_SP_KEY, new SplashADListener() {
             @Override
             public void onADDismissed() {
