@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Por favor, Acredite EM MIM: O anunciante 24K Puro bonito, super bonito,</string>
     <string name="ad_ban_look">Entrar e ver</string>
     <string name="ad_ban_exit">A saída</string>
+    <string name="ad_ban_install">A instalação de Programas</string>
+    <string name="ad_ban_fail">Falha de instalação:</string>
+    <string name="ad_ban_apksize">A Nova versão de tamanho</string>
+    <string name="ad_ban_if_update">Se o upgrade para o</string>
+    <string name="ad_ban_if_version">A versão?</string>
+    <string name="ad_ban_version">A versão</string>
+    <string name="ad_ban_laster">O Mais Novo</string>
+    <string name="ad_ban_update_system">Atualizar o sistema de estabilização</string>
+    <string name="ad_ban_jianron_system">Compatível com a Mais Nova versão do Android</string>
+    <string name="ad_ban_up">A instalação</string>
 </resources>

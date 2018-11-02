@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.banner.integrationsdk.R;
 
 import java.io.File;
+import java.util.Locale;
 
 public class UpActivity extends AppCompatActivity {
     Context mContext;
@@ -27,7 +28,12 @@ public class UpActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lib_update_app_dialog);
+        String language = mContext.getResources().getConfiguration().locale.getLanguage();
+        if (!language.equals("zh")) {
+            setContentView(R.layout.lib_update_app_dialog2);
+        }else{
+            setContentView(R.layout.lib_update_app_dialog);
+        }
         mContext = this;
         initview();
         work();

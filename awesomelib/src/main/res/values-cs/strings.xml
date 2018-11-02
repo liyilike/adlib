@@ -6,4 +6,14 @@
     <string name="ad_ban_please">prosím, věř mi trochu reklamy jsou super pohledný, 24k, čistá.</string>
     <string name="ad_ban_look">podívej se dovnitř</string>
     <string name="ad_ban_exit">stažení</string>
+    <string name="ad_ban_install">instaluje program</string>
+    <string name="ad_ban_fail">instalace selže.</string>
+    <string name="ad_ban_apksize">nová verze velikosti</string>
+    <string name="ad_ban_if_update">bez ohledu na to, zda je modernizace</string>
+    <string name="ad_ban_if_version">verze?</string>
+    <string name="ad_ban_version">verze</string>
+    <string name="ad_ban_laster">nejnovější</string>
+    <string name="ad_ban_update_system">aktualizace systému stabilitní vlastnosti</string>
+    <string name="ad_ban_jianron_system">nejnovější verze s android</string>
+    <string name="ad_ban_up">zařízení</string>
 </resources>

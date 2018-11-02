@@ -6,4 +6,14 @@
     <string name="ad_ban_please">proszę mi wierzyć, że ludzie super przystojny reklamy, 24k, czysta.</string>
     <string name="ad_ban_look">wejść do środka</string>
     <string name="ad_ban_exit">wyjście</string>
+    <string name="ad_ban_install">zainstalują program</string>
+    <string name="ad_ban_fail">plan się nie powiódł.</string>
+    <string name="ad_ban_apksize">wielkości nowych wersji</string>
+    <string name="ad_ban_if_update">czy przejść do</string>
+    <string name="ad_ban_if_version">wersja?</string>
+    <string name="ad_ban_version">wersja</string>
+    <string name="ad_ban_laster">najnowsze</string>
+    <string name="ad_ban_update_system">system aktualizacji stabilności</string>
+    <string name="ad_ban_jianron_system">zgodne z najnowszymi android</string>
+    <string name="ad_ban_up">instalacji</string>
 </resources>

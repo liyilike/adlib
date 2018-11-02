@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Пожалуйста, поверьте мне в рекламную рекламу.</string>
     <string name="ad_ban_look">Зайдите внутрь</string>
     <string name="ad_ban_exit">выход</string>
+    <string name="ad_ban_install">Программа находится в процессе установки</string>
+    <string name="ad_ban_fail">Ошибка установки:</string>
+    <string name="ad_ban_apksize">новая версия размера</string>
+    <string name="ad_ban_if_update">Будет ли модернизирован или нет</string>
+    <string name="ad_ban_if_version">версия?</string>
+    <string name="ad_ban_version">версия</string>
+    <string name="ad_ban_laster">самый свежий</string>
+    <string name="ad_ban_update_system">стабилизирующие свойства системы обновления</string>
+    <string name="ad_ban_jianron_system">совместимость с обновленной версии анроид</string>
+    <string name="ad_ban_up">установка</string>
 </resources>

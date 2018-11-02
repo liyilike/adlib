@@ -6,4 +6,14 @@
     <string name="ad_ban_please">usko minua, mainos erittäin komea mies, 24 karaatin, puhdasta.</string>
     <string name="ad_ban_look">mennä katsomaan.</string>
     <string name="ad_ban_exit">opt - out -</string>
+    <string name="ad_ban_install">ohjelma on asennettu</string>
+    <string name="ad_ban_fail">laitoksen on epäonnistunut:</string>
+    <string name="ad_ban_apksize">uuden version koko</string>
+    <string name="ad_ban_if_update">onko päivitys</string>
+    <string name="ad_ban_if_version">versio?</string>
+    <string name="ad_ban_version">versio</string>
+    <string name="ad_ban_laster">viimeisin</string>
+    <string name="ad_ban_update_system">päivittää järjestelmän vakaus</string>
+    <string name="ad_ban_jianron_system">viimeisin versio on yhteensopiva androidi</string>
+    <string name="ad_ban_up">asennus</string>
 </resources>

@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Σε παρακαλώ πίστεψέ με διαφήμιση που πολύ όμορφος, 24ων, καθαρή όμορφος</string>
     <string name="ad_ban_look">πάμε μέσα και να δούμε</string>
     <string name="ad_ban_exit">Απόσυρση</string>
+    <string name="ad_ban_install">Είναι το σκηνικό</string>
+    <string name="ad_ban_fail">Εγκατάσταση αποτυχία:</string>
+    <string name="ad_ban_apksize">Η νέα έκδοση του μεγέθους</string>
+    <string name="ad_ban_if_update">Αν την αναβάθμιση</string>
+    <string name="ad_ban_if_version">Έκδοση;</string>
+    <string name="ad_ban_version">Έκδοση</string>
+    <string name="ad_ban_laster">Η τελευταία</string>
+    <string name="ad_ban_update_system">την επικαιροποίηση του συστήματος σταθερότητα</string>
+    <string name="ad_ban_jianron_system">Είναι συμβατή με την τελευταία έκδοση του ανδροειδές</string>
+    <string name="ad_ban_up">Εγκατάσταση</string>
 </resources>

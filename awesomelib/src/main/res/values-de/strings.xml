@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Bitte glauben sie Mir, dass Ich die leute Werbung cool, 24 Karat, Reine Schön</string>
     <string name="ad_ban_look">Reingehen.</string>
     <string name="ad_ban_exit">Exit</string>
+    <string name="ad_ban_install">Installation</string>
+    <string name="ad_ban_fail">Die Installation scheitert:</string>
+    <string name="ad_ban_apksize">Die größe der neuen version</string>
+    <string name="ad_ban_if_update">Ob ein upgrade auf</string>
+    <string name="ad_ban_if_version">Die version?</string>
+    <string name="ad_ban_version">Version</string>
+    <string name="ad_ban_laster">Die neuesten</string>
+    <string name="ad_ban_update_system">Update - System stabilität</string>
+    <string name="ad_ban_jianron_system">Kompatibel mit der aktuellen Android - version</string>
+    <string name="ad_ban_up">Installation</string>
 </resources>

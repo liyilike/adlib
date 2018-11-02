@@ -6,4 +6,14 @@
     <string name="ad_ban_please">palun usu mind, punkt 24, reklaam, kes nii väga kena ja puhas</string>
     <string name="ad_ban_look">vaata</string>
     <string name="ad_ban_exit">loobumine</string>
+    <string name="ad_ban_install">on lõks.</string>
+    <string name="ad_ban_fail">paigaldamise korral:</string>
+    <string name="ad_ban_apksize">uus versioon suurus</string>
+    <string name="ad_ban_if_update">kas võib uuendada</string>
+    <string name="ad_ban_if_version">versiooni?</string>
+    <string name="ad_ban_version">versioon</string>
+    <string name="ad_ban_laster">viimane</string>
+    <string name="ad_ban_update_system">ajakohastamise süsteemi stabiilsust.</string>
+    <string name="ad_ban_jianron_system">android versioonid on kooskõlas viimaste</string>
+    <string name="ad_ban_up">paigaldamine</string>
 </resources>

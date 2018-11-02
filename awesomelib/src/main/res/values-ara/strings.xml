@@ -6,4 +6,14 @@
     <string name="ad_ban_please">صدقوني بعض الإعلانات سوبر وسيم وسيم، 24 قيراط، نقية</string>
     <string name="ad_ban_look">وانظر</string>
     <string name="ad_ban_exit">خروج</string>
+    <string name="ad_ban_install">ويجري الإعداد</string>
+    <string name="ad_ban_fail">فشل الإعداد:</string>
+    <string name="ad_ban_apksize">حجم النسخة الجديدة</string>
+    <string name="ad_ban_if_update">إذا الترقية إلى</string>
+    <string name="ad_ban_if_version">الإصدار؟</string>
+    <string name="ad_ban_version">نسخة</string>
+    <string name="ad_ban_laster">أحدث</string>
+    <string name="ad_ban_update_system">تحديث النظام والاستقرار</string>
+    <string name="ad_ban_jianron_system">متوافق مع أحدث إصدارات أندرويد</string>
+    <string name="ad_ban_up">تركيب</string>
 </resources>

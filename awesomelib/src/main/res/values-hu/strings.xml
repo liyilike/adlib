@@ -6,4 +6,14 @@
     <string name="ad_ban_please">kérlek higgy nekem kicsit reklám, aki dögös, 24k, tiszta.</string>
     <string name="ad_ban_look">menj be és nézd meg,</string>
     <string name="ad_ban_exit">visszavonása</string>
+    <string name="ad_ban_install">most csapda</string>
+    <string name="ad_ban_fail">a létesítmény vereség:</string>
+    <string name="ad_ban_apksize">mint új változata</string>
+    <string name="ad_ban_if_update">e fejlesztés</string>
+    <string name="ad_ban_if_version">változat?</string>
+    <string name="ad_ban_version">változat</string>
+    <string name="ad_ban_laster">a legújabb</string>
+    <string name="ad_ban_update_system">állandó teljesítmény frissített rendszerek</string>
+    <string name="ad_ban_jianron_system">a legújabb verziója kompatibilis android</string>
+    <string name="ad_ban_up">a létesítmény</string>
 </resources>

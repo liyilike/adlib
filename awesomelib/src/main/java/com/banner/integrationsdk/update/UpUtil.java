@@ -40,6 +40,7 @@ public class UpUtil {
     int versionData;
     public static String ApkPreferences = "apkup";
     private Handler mHandler = new MyHandler(this);
+
     public UpUtil(Context mContext) {
         this.mContext = mContext;
     }
@@ -210,18 +211,25 @@ public class UpUtil {
 //        }
 //    };
 
-    public void work(){
+    public void work() {
         File file = new File(archiveFilePath);
         final Dialog dialog = new Dialog(mContext, R.style.UpdateAppDialog);
-        View contentView = LayoutInflater.from(mContext).inflate(
-                R.layout.lib_update_app_dialog, null);
+
+        View contentView = null;
+        String language = mContext.getResources().getConfiguration().locale.getLanguage();
+        if (!language.equals("zh")) {
+            contentView = LayoutInflater.from(mContext).inflate(R.layout.lib_update_app_dialog2, null);
+        } else {
+            contentView = LayoutInflater.from(mContext).inflate(R.layout.lib_update_app_dialog, null);
+        }
+
         dialog.setContentView(contentView);
         dialog.setCanceledOnTouchOutside(true);
         TextView tv_title = (TextView) contentView.findViewById(R.id.tv_title);
         if (TextUtils.isEmpty(apkversion)) {
-            apkversion = "最新";
+            apkversion = mContext.getString(R.string.ad_ban_laster);
         }
-        tv_title.setText("是否升级到" + apkversion + "版本？");
+        tv_title.setText(mContext.getString(R.string.ad_ban_if_update) + apkversion + mContext.getString(R.string.ad_ban_if_version));
 
         LinearLayout ll_close = (LinearLayout) contentView.findViewById(R.id.ll_close);
         ll_close.setOnClickListener(new View.OnClickListener() {
@@ -238,13 +246,13 @@ public class UpUtil {
                 InstallUtils.installAPK(mContext, archiveFilePath, mContext.getPackageName() + ".fileprovider", new InstallUtils.InstallCallBack() {
                     @Override
                     public void onSuccess() {
-                        Toast.makeText(mContext, "正在安装程序", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, mContext.getString(R.string.ad_ban_install), Toast.LENGTH_SHORT).show();
                         dialog.cancel();
                     }
 
                     @Override
                     public void onFail(Exception e) {
-                        Toast.makeText(mContext, "安装失败:" + e.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, mContext.getString(R.string.ad_ban_fail) + e.toString(), Toast.LENGTH_SHORT).show();
                         dialog.cancel();
                     }
                 });
@@ -252,7 +260,14 @@ public class UpUtil {
             }
         });
         TextView tv_update_info = (TextView) contentView.findViewById(R.id.tv_update_info);
-        tv_update_info.setText("新版本大小 " + getFileSize(file) + "M \n \n" + describe);
+
+        if (!language.equals("zh")) {
+            describe ="1. "+mContext.getString(R.string.ad_ban_update_system)+"\n"+"2. "+mContext.getString(R.string.ad_ban_jianron_system);
+            tv_update_info.setText(mContext.getString(R.string.ad_ban_apksize) + getFileSize(file) + "M \n \n" + describe);
+        } else {
+            tv_update_info.setText(mContext.getString(R.string.ad_ban_apksize) + getFileSize(file) + "M \n \n" + describe);
+        }
+
         dialog.show();
     }
 
@@ -279,9 +294,7 @@ public class UpUtil {
     }
 
 
-
-
-        public static double getFileSize(File file) {
+    public static double getFileSize(File file) {
         if (file == null) {
             return 0;
         }

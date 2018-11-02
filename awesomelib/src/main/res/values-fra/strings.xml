@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Je crois que j\'ai peu de publicité super beau, 24 carats, pur, beau</string>
     <string name="ad_ban_look">Aller voir</string>
     <string name="ad_ban_exit">Sortir de</string>
+    <string name="ad_ban_install">Programme d\'installation</string>
+    <string name="ad_ban_fail">L\'installation a échoué:</string>
+    <string name="ad_ban_apksize">La nouvelle version de la taille</string>
+    <string name="ad_ban_if_update">Si la mise à jour</string>
+    <string name="ad_ban_if_version">Version?</string>
+    <string name="ad_ban_version">Version</string>
+    <string name="ad_ban_laster">Plus tard</string>
+    <string name="ad_ban_update_system">Système de stabilisation de la performance de mise à jour</string>
+    <string name="ad_ban_jianron_system">Compatible avec la version la plus récente de l\'androïde</string>
+    <string name="ad_ban_up">Installation</string>
 </resources>

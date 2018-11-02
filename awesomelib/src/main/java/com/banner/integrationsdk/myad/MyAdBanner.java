@@ -19,10 +19,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.banner.integrationsdk.Interface.JavaScriptinterface;
 import com.banner.integrationsdk.R;
-import com.banner.integrationsdk.util.AndroidUtil;
 
 import java.lang.ref.WeakReference;
 
@@ -155,6 +155,7 @@ public class MyAdBanner extends AppCompatActivity {
         }
     };
 
+
     //下载监听
     private class MyWebViewDownLoadListener implements DownloadListener {
 
@@ -162,10 +163,20 @@ public class MyAdBanner extends AppCompatActivity {
         public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype,
                                     long contentLength) {
             if (MyAdService.runFlag == true) {
-                AndroidUtil.setToast(mContext, getString(R.string.ad_ban_loading));
+
+                Message msg = new Message();
+                msg.obj = getString(R.string.ad_ban_loading);
+                msg.what = 1;
+                mHandler.sendMessage(msg);
+
+//                AndroidUtil.setToast(mContext, getString(R.string.ad_ban_loading));
                 return;
             }
-            AndroidUtil.setToast(mContext, getString(R.string.ad_ban_start_down));
+            Message msg = new Message();
+            msg.obj = getString(R.string.ad_ban_start_down);
+            msg.what = 1;
+            mHandler.sendMessage(msg);
+//            AndroidUtil.setToast(mContext, getString(R.string.ad_ban_start_down));
             downUrl = url;
 //            stopService(new Intent(mContext, MyAdService.class));
             startService(new Intent(mContext, MyAdService.class));
@@ -211,6 +222,10 @@ public class MyAdBanner extends AppCompatActivity {
             switch (msg.what) {
                 case 0:
                     Activity.title.setText((String) msg.obj);
+                    break;
+                case 1:
+                    Toast.makeText(Activity, (String) msg.obj, Toast.LENGTH_SHORT).show();
+//                    Activity.title.setText((String) msg.obj);
                     break;
             }
         }

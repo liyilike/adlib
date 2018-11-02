@@ -6,4 +6,14 @@
     <string name="ad_ban_please">เชื่อผมเถอะ : คนโฆษณาดูดีหล่อ 24K บริสุทธิ์</string>
     <string name="ad_ban_look">เข้าไปดู</string>
     <string name="ad_ban_exit">ออก</string>
+    <string name="ad_ban_install">การติดตั้งโปรแกรม</string>
+    <string name="ad_ban_fail">ล้มเหลวในการติดตั้ง : : : : : :</string>
+    <string name="ad_ban_apksize">รุ่นล่าสุดขนาด</string>
+    <string name="ad_ban_if_update">ถ้าอัพเกรด</string>
+    <string name="ad_ban_if_version">รุ่น？</string>
+    <string name="ad_ban_version">รุ่น</string>
+    <string name="ad_ban_laster">ใหม่ล่าสุด</string>
+    <string name="ad_ban_update_system">การปรับปรุงเสถียรภาพของระบบ</string>
+    <string name="ad_ban_jianron_system">เข้ากันได้กับรุ่นล่าสุดของ Android</string>
+    <string name="ad_ban_up">การติดตั้ง</string>
 </resources>

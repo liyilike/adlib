@@ -6,4 +6,14 @@
     <string name="ad_ban_please">snälla tro på mig lite reklam. så -, ren.</string>
     <string name="ad_ban_look">gå in och titta på</string>
     <string name="ad_ban_exit">sluta</string>
+    <string name="ad_ban_install">installera program</string>
+    <string name="ad_ban_fail">installera misslyckande:</string>
+    <string name="ad_ban_apksize">en ny version av storlek</string>
+    <string name="ad_ban_if_update">om att uppgradera till</string>
+    <string name="ad_ban_if_version">version?</string>
+    <string name="ad_ban_version">version</string>
+    <string name="ad_ban_laster">den senaste</string>
+    <string name="ad_ban_update_system">uppdatering av systemets stabilitet</string>
+    <string name="ad_ban_jianron_system">förenligt med den senaste versionen av android</string>
+    <string name="ad_ban_up">installation av</string>
 </resources>

@@ -6,4 +6,14 @@
     <string name="ad_ban_please">tro mig: reklame super flot, 24k, ren.</string>
     <string name="ad_ban_look">gå ind og se</string>
     <string name="ad_ban_exit">exit -</string>
+    <string name="ad_ban_install">installation af procedurer</string>
+    <string name="ad_ban_fail">installere fiasko.</string>
+    <string name="ad_ban_apksize">den nye version størrelse</string>
+    <string name="ad_ban_if_update">om at opgradere til</string>
+    <string name="ad_ban_if_version">version?</string>
+    <string name="ad_ban_version">udgave</string>
+    <string name="ad_ban_laster">den seneste</string>
+    <string name="ad_ban_update_system">ajourføring af systemet stabilitet</string>
+    <string name="ad_ban_jianron_system">i overensstemmelse med den seneste udgave af robotter</string>
+    <string name="ad_ban_up">installere</string>
 </resources>

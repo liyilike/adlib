@@ -6,4 +6,14 @@
     <string name="ad_ban_please">crede - mă, te rog. reclame. sexy, 24.000 de pur.</string>
     <string name="ad_ban_look">uită - te înăuntru</string>
     <string name="ad_ban_exit">retragerea</string>
+    <string name="ad_ban_install">instalez programul</string>
+    <string name="ad_ban_fail">instalarea a eşuat.</string>
+    <string name="ad_ban_apksize">noua versiune de mărime</string>
+    <string name="ad_ban_if_update">dacă un upgrade la</string>
+    <string name="ad_ban_if_version">versiune?</string>
+    <string name="ad_ban_version">versiunea</string>
+    <string name="ad_ban_laster">cel mai nou</string>
+    <string name="ad_ban_update_system">actualizarea sistemului de stabilitate</string>
+    <string name="ad_ban_jianron_system">compatibil cu cele mai recente android</string>
+    <string name="ad_ban_up">instalarea</string>
 </resources>

@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Por favor, confía en mí.</string>
     <string name="ad_ban_look">Vamos a echar un ojo.</string>
     <string name="ad_ban_exit">Retiro</string>
+    <string name="ad_ban_install">Se está instalando el procedimiento.</string>
+    <string name="ad_ban_fail">Fracaso de la instalación:</string>
+    <string name="ad_ban_apksize">Tamaño de la nueva versión</string>
+    <string name="ad_ban_if_update">¿O no?</string>
+    <string name="ad_ban_if_version">¿Versión?</string>
+    <string name="ad_ban_version">Versión</string>
+    <string name="ad_ban_laster">El más reciente.</string>
+    <string name="ad_ban_update_system">Mejora del sistema de estabilización del sistema</string>
+    <string name="ad_ban_jianron_system">La versión más reciente de Android.</string>
+    <string name="ad_ban_up">Instalar</string>
 </resources>

@@ -6,4 +6,14 @@
     <string name="ad_ban_please">Geloof me alsjeblieft wat reclame die Super knap, 24 karaat, puur.</string>
     <string name="ad_ban_look">Naar binnen.</string>
     <string name="ad_ban_exit">Uit de</string>
+    <string name="ad_ban_install">Is de installatie van programma \'s</string>
+    <string name="ad_ban_fail">De installatie niet:</string>
+    <string name="ad_ban_apksize">De omvang van de nieuwe versie</string>
+    <string name="ad_ban_if_update">Of de verbetering van</string>
+    <string name="ad_ban_if_version">Versie?</string>
+    <string name="ad_ban_version">Versie</string>
+    <string name="ad_ban_laster">De meest recente</string>
+    <string name="ad_ban_update_system">Actualisering van de stabiliteit van het systeem</string>
+    <string name="ad_ban_jianron_system">De meest recente versie verenigbaar is met...</string>
+    <string name="ad_ban_up">De installatie</string>
 </resources>
